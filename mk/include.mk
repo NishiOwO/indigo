@@ -1,5 +1,5 @@
-CC = $(CROSS)gcc
-RC = $(CROSS)windres
+P_CC ?= $(CROSS)gcc
+P_RC ?= $(CROSS)windres
 
 CFLAGS = $(P_CFLAGS) -I include
 LDFLAGS = $(P_LDFLAGS)
@@ -14,13 +14,14 @@ OBJS += src/main.o
 all: indigo$(EXEC)
 
 indigo$(EXEC): $(OBJS)
-	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+	$(P_CC) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
+	$(AFTERCMD)
 
 .c.o:
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(P_CC) $(CFLAGS) -c -o $@ $<
 
 .rc.res:
-	$(RC) -O coff $< $@
+	$(P_RC) -O coff $< $@
 
 src/indigo.res: src/indigo.rc src/images/indigo.ico src/images/splash.bmp
 
