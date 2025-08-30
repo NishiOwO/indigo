@@ -2,4 +2,5 @@
 
 #include <stdio.h>
 
-void IndigoMainRoutine(void) { IndigoShowSplash(); }
+void IndigoMainRoutine(void) {}
+void IndigoMainUIRoutine(void) { IndigoShowSplash(); }
