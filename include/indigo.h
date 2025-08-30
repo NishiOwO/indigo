@@ -6,11 +6,14 @@
 #include <string.h>
 #include <stddef.h>
 
+#define VERSION "1.00"
+
 /* main.c */
 void IndigoMainRoutine(void);
 void IndigoMainUIRoutine(void);
 
 /* ui driver */
 void IndigoShowSplash(void);
+void IndigoShowMain(void);
 
 #endif

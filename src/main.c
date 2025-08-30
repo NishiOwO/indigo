@@ -3,4 +3,7 @@
 #include <stdio.h>
 
 void IndigoMainRoutine(void) {}
-void IndigoMainUIRoutine(void) { IndigoShowSplash(); }
+void IndigoMainUIRoutine(void) {
+	IndigoShowSplash();
+	IndigoShowMain();
+}

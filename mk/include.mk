@@ -21,9 +21,9 @@ indigo$(EXEC): $(OBJS)
 	$(P_CC) $(CFLAGS) -c -o $@ $<
 
 .rc.res:
-	$(P_RC) -O coff $< $@
+	$(P_RC) -I include -O coff $< $@
 
-src/indigo.res: src/indigo.rc src/images/indigo.ico src/images/splash.bmp
+src/indigo.res: src/indigo.rc src/gui.rc src/images/indigo.ico src/images/splash.bmp
 
 format:
 	clang-format --verbose -i `find include src "(" -name "*.c" -or -name "*.h" ")" -and -not -name "stb_ds.h"`

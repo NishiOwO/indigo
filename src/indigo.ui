@@ -1,0 +1,15 @@
+# Indigo UI stuff, read tools/gui.pl to understand
+# vim: ft=text
+Set Title=Indigo
+Set IncludeHeader=indigores.h
+Set ResourceHeader=include/indigores.h
+
+Popup "&File"
+	MenuItem "&Quit"
+
+Popup "&Edit"
+
+Popup "&View"
+
+HelpPopup "&Help"
+	MenuItem "&Version"

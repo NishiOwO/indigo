@@ -2,7 +2,7 @@
 
 P_CFLAGS += -mwindows
 P_LDFLAGS += -mwindows
-P_LIBS += -lgdi32 -lwsock32
+P_LIBS += -lgdi32 -lwsock32 -lcomctl32
 
 P_OBJS += src/ui/win32.o src/indigo.res
 

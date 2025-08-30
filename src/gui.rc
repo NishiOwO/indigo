@@ -1,0 +1,21 @@
+/**
+ * This file is auto-generated using ./tool/gui.pl
+ * DO NOT EDIT MANUALLY
+ */
+
+#include <winver.h>
+
+#include <indigores.h>
+
+IndigoMenu MENU {
+	POPUP "&File" {
+		MENUITEM "&Quit", ID_MENU_FILE_QUIT
+	}
+	POPUP "&Edit" {
+	}
+	POPUP "&View" {
+	}
+	POPUP "&Help", HELP {
+		MENUITEM "&Version", ID_MENU_HELP_VERSION
+	}
+}

@@ -1,4 +1,8 @@
 #include <winver.h>
 
+#include <indigores.h>
+
 INDIGO ICON "images/indigo.ico"
 SPLASH BITMAP "images/splash.bmp"
+
+#include "gui.rc"
