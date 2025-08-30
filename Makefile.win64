@@ -1,0 +1,5 @@
+# Makefile for Windows 64-bit.
+
+CROSS = x86_64-w64-mingw32-
+
+include Makefile.windows

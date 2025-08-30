@@ -1,0 +1,5 @@
+/indigo
+/indigo.exe
+*.res
+*.o
+*.dll

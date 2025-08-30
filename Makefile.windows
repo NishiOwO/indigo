@@ -1,0 +1,11 @@
+# Makefile for Windows.
+
+P_CFLAGS = -mwindows
+P_LDFLAGS = -mwindows
+P_LIBS = -lgdi32 -lwsock32
+
+P_OBJS = src/ui/win32.o src/indigo.res
+
+EXEC = .exe
+
+include mk/include.mk

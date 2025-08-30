@@ -1,0 +1,10 @@
+# Makefile for NetBSD.
+# Checked working on NetBSD/amd64 10.x
+
+P_CFLAGS = -I/usr/X11R7/include -I/usr/pkg/include
+P_LDFLAGS = -L/usr/X11R7/lib -L/usr/pkg/lib
+P_LIBS = -lXm -lXt
+
+P_OBJS = src/ui/motif.o
+
+include mk/include.mk
