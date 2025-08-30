@@ -50,7 +50,13 @@ static LRESULT CALLBACK SplashWndProc(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 	} else if(msg == WM_ERASEBKGND) {
 	} else if(msg == WM_PAINT) {
 		PAINTSTRUCT ps;
-		HDC	    hDC = BeginPaint(hWnd, &ps);
+		RECT rc;
+		HDC	    hDC;
+
+		GetClientRect(hWnd, &rc);
+
+		hDC = BeginPaint(hWnd, &ps);
+		ShowBitmapSize(hDC, "SPLASH", 0, 0, rc.right - rc.left, rc.bottom - rc.top);
 		EndPaint(hWnd, &ps);
 	} else {
 		return DefWindowProc(hWnd, msg, wp, lp);
@@ -93,7 +99,7 @@ void IndigoShowSplash(void) {
 	RECT	  rc;
 	HWND	  hWnd;
 	const int ww = 640;
-	const int wh = 480;
+	const int wh = 400;
 	int	  dw;
 	int	  dh;
 
